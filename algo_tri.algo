@@ -1,0 +1,34 @@
+PROCEDURE SortArray(tab1 : ARRAY_OF INTEGER[])
+VAR
+    i, j, aux,n:INTEGER;  
+BEGIN
+   let n :=tab1.length();
+   FOR i FROM 1 TO i<n   DO
+         aux = tab1[i];  
+         j = i - 1;  
+         while(j>=0 && aux <= tab1[j])  
+        {    
+            tab1[j+1] = tab1[j];     
+            j = j-1;    
+        }    
+        tab[j+1] = aux;  
+   END_FOR
+END
+PROCEDURE Afficher(arr : ARRAY_OF INTEGER[])
+VAR
+i,n:INTEGER;  
+BEGIN
+ let n = arr.length();  
+ FOR i FROM 0 TO n-1   DO
+     print(arr[i]+"");
+ END_FOR 
+END
+ALGORITHM InsertionSort
+VAR
+    tab:ARRAY_OF INTEGER[];
+BEGIN
+    let tab:={100,45,20,15};
+    SortArray(tab);
+    print("the array after sorting");
+    Afficher(tab);
+END
